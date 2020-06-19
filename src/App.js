@@ -1,9 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import InstructorClass from './InstructorClass';
 
-function App() {
-  return <div className="App">Anywhere Fitness</div>;
-}
+const App = () => {
+  return (
+    <>
+      <h1>Anywhere Fitness</h1>
+
+     
+
+      <InstructorClass />
+
+    </>
+  
+  
+  );
+};
 
 export default App;
