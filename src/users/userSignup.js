@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
+import { Button } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 
 
 const UserSignup = props => {
@@ -29,7 +31,7 @@ const UserSignup = props => {
                 //     email: "",
                 //     password: ""
                 // });
-                props.history.push("/classes");
+                props.history.push("/userLogin");
             })
             .catch(err => {
                 console.error(err.message)
@@ -64,9 +66,23 @@ const UserSignup = props => {
                     onChange={handleChange}
                     required
                 />
-                <button type="submit">Sign Up</button>
+
+                <Button type="submit">
+                    {/* {!credentials && < Spinner
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                    />} */}
+
+                    Sign Up
+                </Button>
                 <br />
                 <Link to="/userLogin">I already have a user account</Link>
+                <br></br>
+                <Link exact to="/"><Button>Home</Button></Link>
+
             </form>
         </div>
     )

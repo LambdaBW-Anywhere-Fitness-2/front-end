@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
+import { Link } from "react-router-dom";
 
 const UserLogin = props => {
     const [credentials, setCredentials] = useState({})
@@ -56,6 +57,8 @@ const UserLogin = props => {
                 <button type="submit">Sign In</button>
 
             </form>
+            <Link exact to="/"><button>Home</button></Link>
+
         </div>
     )
 }
