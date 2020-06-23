@@ -8,14 +8,20 @@
     box-sizing: border-box;
 }
 
+* {
+
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
+
 }
 
 
 
 h1 {
     text-align: center;
+    
 }
 
 .banner {
@@ -61,7 +67,7 @@ header {
 
 /* color for nav  */
 nav {
-    background: #0082e6;
+    background: #46ACC2;
     height: 80px;
     width: 100%;
 }
@@ -141,7 +147,7 @@ a:hover {
 }
 
 footer {
-    background-color: #444;
+    background-color: #46ACC2;
     width: 100%;
     padding: 6% 0 10%;
 }
