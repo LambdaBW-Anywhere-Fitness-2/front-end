@@ -187,15 +187,14 @@ footer {
     label.logo {
         font-size: 30px;
         padding-left: 50px;
+        margin-left: 10%;
 
     }
-
+    /* nav tabs */
     nav ul {
-
-        padding-left: 50px;
-        padding-right: 50px;
+        width: 100%;
+        margin-right: 0;
         background-color: #46ACC2;
-
     }
 
     nav ul li {
