@@ -15,14 +15,14 @@ function App() {
     <div className="App">
       <h2>Anywhere Fitness</h2>
 
-      <Route exact path="/" component={Homepage} />
+      {/* <Route exact path="/" component={Homepage} />
       <Route path="/classes" component={Classes} />
       <Route path="/userSignup" component={UserSignup} />
       <Route path="/userLogin" component={UserLogin} />
-      <Route path="/homePage" component={Homepage} />
+      <Route path="/homePage" component={Homepage} /> */}
 
       {/* <Homepage /> */}
-      {/* <FitnessRoutes /> */}
+      <FitnessRoutes />
     </div>
   );
 };
