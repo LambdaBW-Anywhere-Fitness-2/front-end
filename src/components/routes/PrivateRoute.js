@@ -11,7 +11,7 @@ const PrivateRoute = ({ component: Component, ...routeProps }) => {
                     return <Component {...props} />
 
                 } else {
-                    return <Redirect to="/" />
+                    return <Redirect to="/homePage" />
                 }
             }}
         />
