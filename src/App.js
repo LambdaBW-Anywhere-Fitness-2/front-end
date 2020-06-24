@@ -1,4 +1,3 @@
-import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import FitnessRoutes from "./components/routes/Routes";
@@ -16,7 +15,8 @@ function App() {
 
       <FitnessRoutes />
     </div>
-  )
-}
+  );
+};
+
 
 export default App;

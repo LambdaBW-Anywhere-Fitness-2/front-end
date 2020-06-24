@@ -4,14 +4,19 @@ import Axios from 'axios';
 
 const SearchClass = () => {
     const [classInfo, setClassInfo] = useState({
-        name:'', 
-        small: false, 
-        average: false,
-        large: false,
-        easy: false,
-        medium: false, 
-        hard: false
+        time: '', 
+        date: '', 
+        location: '', 
+        duration: '', 
+        size: '', 
+        intensity: ''
     })
+
+    const handleChange = (e) => {
+        setClassInfo({...classInfo, [e.target.name]: e.target.value})
+    }
+
+    
 
     useEffect(() => {
         Axios.get('https://anywherefitnessapp.herokuapp.com/api/clients/class')
@@ -32,7 +37,7 @@ const SearchClass = () => {
             <Form>
                 <label htmlFor='time'>
                     Class Time
-                    <select type='time' id='time' class='time' >
+                    <select type='time' id='time' name='time' >
                         <option value='earlyMorning'>Early Morning</option>
                         <option value='lateMorning'>Late Morning</option>
                         <option value='midDay'>Mid-day</option>
@@ -49,7 +54,13 @@ const SearchClass = () => {
                     <input type='text' id='location' name='location' />
                 </label>
                 <label htmlFor='duration'>
-                    <select id='duration' name='duration' value={classInfo.duration} />
+                    Class Duration
+                    <select id='duration' name='duration' value={classInfo.duration} >
+                        <option value='0-15Min'>0-15 Minutes</option>
+                        <option value='15-30Min'>15-30 Minutes</option>
+                        <option value='30-45Min'>30-45 Minutes</option>
+                        <option value='45-60Min'>45-60 Minutes</option>
+                    </select>
                 </label>
                 <label htmlFor='size'>
                     Class size
