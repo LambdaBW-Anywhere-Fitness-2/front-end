@@ -9,7 +9,7 @@ const UserLogin = props => {
         e.preventDefault()
 
         axiosWithAuth()
-            .post("/signin/client", credentials)
+            .post("/signin", credentials)
             .then(res => {
                 console.log("login axios call", res)
                 localStorage.setItem("token", res.data.token)

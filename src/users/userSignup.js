@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
-import { Button } from "react-bootstrap";
-import Spinner from "react-bootstrap/Spinner";
+// import { Button } from "react-bootstrap";
+// import Spinner from "react-bootstrap/Spinner";
 
 
 const UserSignup = props => {
@@ -67,7 +67,7 @@ const UserSignup = props => {
                     required
                 />
 
-                <Button type="submit">
+                <button type="submit">
                     {/* {!credentials && < Spinner
                         as="span"
                         animation="border"
@@ -77,11 +77,11 @@ const UserSignup = props => {
                     />} */}
 
                     Sign Up
-                </Button>
+                </button>
                 <br />
                 <Link to="/userLogin">I already have a user account</Link>
                 <br></br>
-                <Link exact to="/"><Button>Home</Button></Link>
+                <Link exact to="/"><button>Home</button></Link>
 
             </form>
         </div>
