@@ -8,9 +8,6 @@
     box-sizing: border-box;
 }
 
-* {
-
-}
 
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -24,7 +21,7 @@ h1 {
     
 }
 
-.banner {
+.banner2 {
     margin-left: 25%;
 }
 
@@ -51,13 +48,13 @@ img {
 
 #callout p {
     text-align: right;
-    color: #fff;
+    color: black;
     font-size: 14px;
     padding-right: 5%;
 }
 
 #callout p a {
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
@@ -76,8 +73,9 @@ label.logo {
     color: white;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding-right: 50%;
     font-weight: bold;
+
 }
 
 nav ul {
@@ -157,7 +155,7 @@ footer {
 }
 
 .social a {
-    color: #FFF;
+    color: black;
     padding: 3%;
 }
 
@@ -173,7 +171,7 @@ footer {
     padding-right: 0;
 
 }
-    .banner {
+    .banner2 {
         /* display: flex; */
         width: 100%;
         margin-left: 0;
@@ -244,7 +242,8 @@ footer {
 
     .left-col {
         width: 100%;
-        padding: 0;
+        padding: 1%;
+
     }
 
     .sidebar {
@@ -254,7 +253,8 @@ footer {
 
     .one-third {
         width: 100%;
-        padding: 0;
+        padding: 1%;
+
     }
 
     .social {
@@ -269,7 +269,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .banner {
+    .banner2 {
         width: 100%;
     }
 
@@ -361,3 +361,158 @@ footer {
 
     */
 }
+
+/* Contact Section CSS */
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#contact-section {
+    background-color: white ;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+#contact-section .container h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: rgba(238,235,235);
+    letter-spacing: 2px;
+}
+
+#contact-section .container p {
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+    color: black;
+    letter-spacing: 3px;
+}
+
+#contact-form i.fa{
+    font-size: 22px;
+    padding: 3%;
+    background-color: none;    
+    margin: 2%;
+    border-radius: 80%;
+    cursor: pointer
+    border: 2px solid rgba(190,190,190);
+    color: rgba(190,190,190);
+}
+#contact-form i.faf:hover{
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+}
+
+.contact-form{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.form-info{
+    font-size: 16px;
+    /* font-style: italic; */
+    color: black;
+    letter-spacing: 2px;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: rgba(136,133,133,0.5);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+input::placeholder{
+    color: black;
+}
+textarea{
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: rgbaa(136,,133,0.5);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+textarea::placeholder{
+    color: #fff;
+}
+
+.submit{
+    width: 40%;
+    background: none;
+    padding: 4px;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 33px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-left: 3%;
+    border: 2px solid rgba(190,,190,190);
+    color: rgba(190,,190,190);
+}
+
+.submit:hover{
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+#contact-section .contact-form{
+    display: block;
+    width: 100%;
+    text-align: center;
+ }
+
+ #contact-section .submit{
+     width: 60%;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
