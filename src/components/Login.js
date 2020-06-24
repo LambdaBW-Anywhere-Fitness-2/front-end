@@ -13,11 +13,18 @@ const Login = props => {
             .then(res => {
                 console.log("login axios call", res)
                 localStorage.setItem("token", res.data.token)
-                props.history.push("/classes");
+                // console.log("check", res.data.role_id);
+                if (res.data.role_id === 123) {
+                    props.history.push("/instructorClasses")
+                } else {
+                    props.history.push("/clientClasses")
+                }
+
+
             })
             .catch(err => {
                 console.error(err.message);
-            })
+            });
     }
     const handleChange = e => {
         setCredentials({

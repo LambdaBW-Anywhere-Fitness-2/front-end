@@ -1,43 +1,55 @@
-import React, {useState, useEffect} from 'react';
-import styled from 'styled-components'
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import styled from 'styled-components';
 import Axios from 'axios';
 
-const SearchClass = () => {
+const ClientClasses = () => {
     const [classInfo, setClassInfo] = useState({
-        time: '', 
-        date: '', 
-        location: '', 
-        duration: '', 
-        size: '', 
+        time: '',
+        date: '',
+        location: '',
+        duration: '',
+        size: '',
         intensity: ''
     })
 
     const handleChange = (e) => {
-        setClassInfo({...classInfo, [e.target.name]: e.target.value})
+        setClassInfo({ ...classInfo, [e.target.name]: e.target.value })
     }
-
-    
 
     useEffect(() => {
         Axios.get('https://anywherefitnessapp.herokuapp.com/api/clients/class')
-        .then(res => {
-            console.log('Response Data', res.data)
-        })
-        .catch(err => {
-            console.log('Error:', err)
-        })
+            .then(res => {
+                console.log('Response Data', res.data)
+            })
+            .catch(err => {
+                console.log('Error:', err)
+            })
     }, [])
 
-    const Form = styled.form `
+    const Form = styled.form`
         display: flex;
         flex-direction: column;
     `
-    return(
+    const Button = styled.button`
+        width: 100px;
+        margin: 0 auto;
+    `
+
+    return (
         <div>
-            <Form>
+
+            <h2>
+                This is where the classes will show!
+        </h2>
+
+            <Form onSubmit={e => {
+                e.preventDefault()
+                console.log('New Class Info', classInfo)
+            }}>
                 <label htmlFor='time'>
                     Class Time
-                    <select type='time' id='time' name='time' >
+                    <select type='time' id='time' name='time' onChange={handleChange}>
                         <option value='earlyMorning'>Early Morning</option>
                         <option value='lateMorning'>Late Morning</option>
                         <option value='midDay'>Mid-day</option>
@@ -47,15 +59,15 @@ const SearchClass = () => {
                 </label>
                 <label htmlFor='date'>
                     Class Date
-                    <input type='date' id='date' name='date' />
+                    <input type='date' id='date' name='date' value={classInfo.date} onChange={handleChange} />
                 </label>
                 <label htmlFor='location'>
                     Class location
-                    <input type='text' id='location' name='location' />
+                    <input type='text' id='location' name='location' value={classInfo.location} onChange={handleChange} />
                 </label>
                 <label htmlFor='duration'>
                     Class Duration
-                    <select id='duration' name='duration' value={classInfo.duration} >
+                    <select id='duration' name='duration' value={classInfo.duration} onChange={handleChange} >
                         <option value='0-15Min'>0-15 Minutes</option>
                         <option value='15-30Min'>15-30 Minutes</option>
                         <option value='30-45Min'>30-45 Minutes</option>
@@ -64,7 +76,7 @@ const SearchClass = () => {
                 </label>
                 <label htmlFor='size'>
                     Class size
-                    <select id='size' name= 'size' >
+                    <select id='size' name='size' value={classInfo.size} onChange={handleChange} >
                         <option value='small'>Small</option>
                         <option value='average'>Medium</option>
                         <option value='large'>Large</option>
@@ -72,15 +84,30 @@ const SearchClass = () => {
                 </label>
                 <label htmlFor='intensity'>
                     Class intensity
-                    <select id='intensity' name='intensity' value=''>
+                    <select id='intensity' name='intensity' value={classInfo.intensity} onChange={handleChange}>
                         <option value='easy'>Easy</option>
                         <option value='medium'>Medium</option>
                         <option value='hard'>Hard</option>
                     </select>
                 </label>
+                <Button type='submit'>Submit</Button>
+                <Button type='reset' onClick={() => {
+                    setClassInfo({
+                        time: '',
+                        date: '',
+                        location: '',
+                        duration: '',
+                        size: '',
+                        intensity: ''
+                    })
+                }}>Reset</Button>
             </Form>
+
+
+            <Link exact to="/"><button>Home</button></Link>
         </div>
+
     )
 }
 
-export default SearchClass
+export default ClientClasses;
