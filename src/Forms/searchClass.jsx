@@ -43,7 +43,6 @@ const SearchClass = () => {
                         <option value='midDay'>Mid-day</option>
                         <option value='earlyAfternoon'>Early Afternoon</option>
                         <option value='lateAfternoon'>Late Afternoon</option>
-                        <option value='lateAfternoon'>Late Afternoon</option>
                     </select>
                 </label>
                 <label htmlFor='date'>
