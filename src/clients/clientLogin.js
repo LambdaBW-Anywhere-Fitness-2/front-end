@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { Link } from "react-router-dom";
 
-const UserLogin = props => {
+const Login = props => {
     const [credentials, setCredentials] = useState({})
 
     const login = e => {
         e.preventDefault()
 
         axiosWithAuth()
-            .post("/signin/client", credentials)
+            .post("/signin", credentials)
             .then(res => {
                 console.log("login axios call", res)
                 localStorage.setItem("token", res.data.token)
@@ -30,14 +30,6 @@ const UserLogin = props => {
         <div>
             <form onSubmit={login}>
                 <h3>Sign In</h3>
-                <input
-                    type="text"
-                    placeholder="Full Name"
-                    name="name"
-                    value={credentials.name}
-                    onChange={handleChange}
-                    required
-                />
                 <input
                     type="email"
                     placeholder="Email"
@@ -63,4 +55,4 @@ const UserLogin = props => {
     )
 }
 
-export default UserLogin; 
+export default Login; 

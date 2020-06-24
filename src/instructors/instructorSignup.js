@@ -6,32 +6,33 @@ import { Button } from "react-bootstrap";
 
 
 const InstructorSignup = props => {
-    const [credentials, setCredentials] = useState({
+    const [instructorCredentials, setinstructorCredentials] = useState({
         name: "",
         email: "",
-        password: ""
+        password: "",
+        role_id: ""
     })
 
     const handleChange = e => {
-        setCredentials({
-            ...credentials,
+        setinstructorCredentials({
+            ...instructorCredentials,
             [e.target.name]: e.target.value
         });
     };
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("handlesubmit", credentials);
+        console.log("handlesubmit", instructorCredentials);
         axiosWithAuth()
-            .post("/signup/client", credentials)
+            .post("/signup/instructor", instructorCredentials)
             .then(res => {
                 console.log("data from the signup component: ", res);
-                // setCredentials({
+                // setinstructorCredentials({
                 //     name: "",
                 //     email: "",
                 //     password: ""
                 // });
-                props.history.push("/instructorLogin");
+                props.history.push("/login");
             })
             .catch(err => {
                 console.error(err.message)
@@ -46,7 +47,7 @@ const InstructorSignup = props => {
                     type="text"
                     placeholder="Full Name"
                     name="name"
-                    value={credentials.name}
+                    value={instructorCredentials.name}
                     onChange={handleChange}
                     required
                 />
@@ -54,7 +55,7 @@ const InstructorSignup = props => {
                     type="email"
                     placeholder="Email"
                     name="email"
-                    value={credentials.email}
+                    value={instructorCredentials.email}
                     onChange={handleChange}
                     required
                 />
@@ -62,7 +63,15 @@ const InstructorSignup = props => {
                     type="password"
                     placeholder="Password"
                     name="password"
-                    value={credentials.password}
+                    value={instructorCredentials.password}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Role ID"
+                    name="role_id"
+                    value={instructorCredentials.role_id}
                     onChange={handleChange}
                     required
                 />
@@ -71,7 +80,7 @@ const InstructorSignup = props => {
                     Sign Up
                 </Button>
                 <br />
-                <Link to="/instructorLogin">I already have an instructor account</Link>
+                <Link to="/login">I already have an instructor account</Link>
                 <br></br>
                 <Link exact to="/"><Button>Home</Button></Link>
 

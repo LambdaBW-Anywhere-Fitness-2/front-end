@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 
 
-const UserSignup = props => {
+const ClientSignup = props => {
     const [credentials, setCredentials] = useState({
         name: "",
         email: "",
@@ -31,7 +31,7 @@ const UserSignup = props => {
                 //     email: "",
                 //     password: ""
                 // });
-                props.history.push("/userLogin");
+                props.history.push("/login");
             })
             .catch(err => {
                 console.error(err.message)
@@ -79,7 +79,7 @@ const UserSignup = props => {
                     Sign Up
                 </Button>
                 <br />
-                <Link to="/userLogin">I already have a user account</Link>
+                <Link to="/login">I already have a client account</Link>
                 <br></br>
                 <Link exact to="/"><Button>Home</Button></Link>
 
@@ -90,4 +90,4 @@ const UserSignup = props => {
 }
 
 
-export default UserSignup;
+export default ClientSignup;
