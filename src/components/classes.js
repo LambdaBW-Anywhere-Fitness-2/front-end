@@ -67,7 +67,6 @@ const Classes = () => {
                         <option value='15-30Min'>15-30 Minutes</option>
                         <option value='30-45Min'>30-45 Minutes</option>
                         <option value='45-60Min'>45-60 Minutes</option>
-                        <option value='45-60Min'>45-60 Minutes</option>
                     </select>
                 </label>
                 <label htmlFor='size'>
