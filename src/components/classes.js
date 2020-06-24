@@ -38,6 +38,11 @@ const Classes = () => {
 
     return (
         <div>
+
+            <h2>
+                This is where the classes will show!
+        </h2>
+
             <Form onSubmit={e => {
                 e.preventDefault()
                 console.log('New Class Info', classInfo)
@@ -97,6 +102,7 @@ const Classes = () => {
                     })
                 }}>Reset</Button>
             </Form>
+
 
             <Link exact to="/"><button>Home</button></Link>
         </div>
