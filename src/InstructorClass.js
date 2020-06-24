@@ -10,7 +10,7 @@ const InstructorClass = () => {
 
   return (
     <>
-   <h1>Create Class</h1>
+   <h1>Create Class!</h1>
 
       <Form>
         <label htmlFor='name'>
