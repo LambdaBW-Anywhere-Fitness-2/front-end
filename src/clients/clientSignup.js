@@ -11,6 +11,7 @@ const ClientSignup = props => {
         email: "",
         password: ""
     })
+    const [isFetching, setIsFetching] = useState(false)
 
     const handleChange = e => {
         setCredentials({
@@ -22,6 +23,7 @@ const ClientSignup = props => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log("handlesubmit", credentials);
+        setIsFetching(true)
         axiosWithAuth()
             .post("/signup/client", credentials)
             .then(res => {
@@ -31,6 +33,7 @@ const ClientSignup = props => {
                 //     email: "",
                 //     password: ""
                 // });
+                setIsFetching(false);
                 props.history.push("/login");
             })
             .catch(err => {
@@ -68,13 +71,13 @@ const ClientSignup = props => {
                 />
 
                 <Button type="submit">
-                    {/* {!credentials && < Spinner
+                    {isFetching ? (< Spinner className="mx-2"
                         as="span"
                         animation="border"
                         size="sm"
                         role="status"
                         aria-hidden="true"
-                    />} */}
+                    />) : ""}
 
                     Sign Up
                 </Button>
