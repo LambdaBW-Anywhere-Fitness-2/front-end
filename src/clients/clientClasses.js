@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Axios from 'axios';
@@ -17,18 +17,18 @@ const Form = styled.form `
         color: 
     `
 
-const Classes = () => {
+const ClientClasses = () => {
     const [classInfo, setClassInfo] = useState({
-        time: '', 
-        date: '', 
-        location: '', 
-        duration: '', 
-        size: '', 
+        time: '',
+        date: '',
+        location: '',
+        duration: '',
+        size: '',
         intensity: ''
     })
 
     const handleChange = (e) => {
-        setClassInfo({...classInfo, [e.target.name]: e.target.value})
+        setClassInfo({ ...classInfo, [e.target.name]: e.target.value })
     }
 
     const [info, setInfo] = useState([]);
@@ -46,6 +46,11 @@ const Classes = () => {
 
     return (
         <div>
+
+            <h2>
+                This is where the classes will show!
+        </h2>
+
             <Form onSubmit={e => {
                 e.preventDefault()
                 console.log('New Class Info', classInfo)
@@ -121,4 +126,4 @@ const Classes = () => {
     )
 }
 
-export default Classes;
+export default ClientClasses;

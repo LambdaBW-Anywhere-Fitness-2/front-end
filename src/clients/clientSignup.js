@@ -9,12 +9,13 @@ import axiosWithAuth from "../utils/axiosWithAuth";
 
 >>>>>>> chrisWestberg
 
-const UserSignup = props => {
+const ClientSignup = props => {
     const [credentials, setCredentials] = useState({
         name: "",
         email: "",
         password: ""
     })
+    const [isFetching, setIsFetching] = useState(false)
 
     const handleChange = e => {
         setCredentials({
@@ -26,6 +27,7 @@ const UserSignup = props => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log("handlesubmit", credentials);
+        setIsFetching(true)
         axiosWithAuth()
             .post("/signup/client", credentials)
             .then(res => {
@@ -35,7 +37,8 @@ const UserSignup = props => {
                 //     email: "",
                 //     password: ""
                 // });
-                props.history.push("/userLogin");
+                setIsFetching(false);
+                props.history.push("/login");
             })
             .catch(err => {
                 console.error(err.message)
@@ -71,19 +74,24 @@ const UserSignup = props => {
                     required
                 />
 
+<<<<<<< HEAD:src/users/userSignup.js
                 <button type="submit">
                     {/* {!credentials && < Spinner
+=======
+                <Button type="submit">
+                    {isFetching ? (< Spinner className="mx-2"
+>>>>>>> 7e76e2c73f19a5e04a60001dcff6ec8cc93f84c3:src/clients/clientSignup.js
                         as="span"
                         animation="border"
                         size="sm"
                         role="status"
                         aria-hidden="true"
-                    />} */}
+                    />) : ""}
 
                     Sign Up
                 </button>
                 <br />
-                <Link to="/userLogin">I already have a user account</Link>
+                <Link to="/login">I already have a client account</Link>
                 <br></br>
                 <Link exact to="/"><button>Home</button></Link>
 
@@ -94,4 +102,4 @@ const UserSignup = props => {
 }
 
 
-export default UserSignup;
+export default ClientSignup;

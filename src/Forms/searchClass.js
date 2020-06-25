@@ -1,38 +1,38 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import Axios from 'axios';
 
 const SearchClass = () => {
     const [classInfo, setClassInfo] = useState({
-        time: '', 
-        date: '', 
-        location: '', 
-        duration: '', 
-        size: '', 
+        time: '',
+        date: '',
+        location: '',
+        duration: '',
+        size: '',
         intensity: ''
     })
 
     const handleChange = (e) => {
-        setClassInfo({...classInfo, [e.target.name]: e.target.value})
+        setClassInfo({ ...classInfo, [e.target.name]: e.target.value })
     }
 
-    
+
 
     useEffect(() => {
         Axios.get('https://anywherefitnessapp.herokuapp.com/api/clients/class')
-        .then(res => {
-            console.log('Response Data', res.data)
-        })
-        .catch(err => {
-            console.log('Error:', err)
-        })
+            .then(res => {
+                console.log('Response Data', res.data)
+            })
+            .catch(err => {
+                console.log('Error:', err)
+            })
     }, [])
 
-    const Form = styled.form `
+    const Form = styled.form`
         display: flex;
         flex-direction: column;
     `
-    return(
+    return (
         <div>
             <Form>
                 <label htmlFor='time'>
@@ -64,7 +64,7 @@ const SearchClass = () => {
                 </label>
                 <label htmlFor='size'>
                     Class size
-                    <select id='size' name= 'size' >
+                    <select id='size' name='size' >
                         <option value='small'>Small</option>
                         <option value='average'>Medium</option>
                         <option value='large'>Large</option>

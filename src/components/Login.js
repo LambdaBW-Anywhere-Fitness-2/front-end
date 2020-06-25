@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { Link } from "react-router-dom";
 
-const UserLogin = props => {
+const Login = props => {
     const [credentials, setCredentials] = useState({})
 
     const login = e => {
@@ -13,11 +13,18 @@ const UserLogin = props => {
             .then(res => {
                 console.log("login axios call", res)
                 localStorage.setItem("token", res.data.token)
-                props.history.push("/classes");
+                // console.log("check", res.data.role_id);
+                if (res.data.role_id === 123) {
+                    props.history.push("/instructorClasses")
+                } else {
+                    props.history.push("/clientClasses")
+                }
+
+
             })
             .catch(err => {
                 console.error(err.message);
-            })
+            });
     }
     const handleChange = e => {
         setCredentials({
@@ -30,14 +37,6 @@ const UserLogin = props => {
         <div>
             <form onSubmit={login}>
                 <h3>Sign In</h3>
-                <input
-                    type="text"
-                    placeholder="Full Name"
-                    name="name"
-                    value={credentials.name}
-                    onChange={handleChange}
-                    required
-                />
                 <input
                     type="email"
                     placeholder="Email"
@@ -63,4 +62,4 @@ const UserLogin = props => {
     )
 }
 
-export default UserLogin; 
+export default Login; 
