@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
+<<<<<<< HEAD
 // import Button from 'react-bootstrap/Button'
+=======
+// import { Button } from "react-bootstrap";
+// import Spinner from "react-bootstrap/Spinner";
+
+>>>>>>> chrisWestberg
 
 const UserSignup = props => {
     const [credentials, setCredentials] = useState({
