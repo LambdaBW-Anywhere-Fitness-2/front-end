@@ -8,6 +8,7 @@ import Homepage from "../homepage";
 import PrivateRoute from "./PrivateRoute";
 import InstructorSignup from "../../instructors/instructorSignup";
 
+
 const FitnessRoutes = () => {
     return (
         <div>
@@ -18,6 +19,7 @@ const FitnessRoutes = () => {
             <Route path="/instructorSignup" component={InstructorSignup} />
             <Route path="/login" component={Login} />
             <Route path="/homePage" component={Homepage} />
+           
 
 
         </div>
