@@ -2,6 +2,20 @@ import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Axios from 'axios';
+import ClassCard from './classCard';
+
+const Form = styled.form `
+        display: flex;
+    `
+    const Button = styled.button `
+        width: 100px;
+        margin: 0 auto;
+    `
+    const Div = styled.div `
+        display: flex;
+        justify-content: space-between;
+        color: 
+    `
 
 const Classes = () => {
     const [classInfo, setClassInfo] = useState({
@@ -17,27 +31,18 @@ const Classes = () => {
         setClassInfo({...classInfo, [e.target.name]: e.target.value})
     }
 
+    const [info, setInfo] = useState([]);
+
     useEffect(() => {
         Axios.get('https://anywherefitnessapp.herokuapp.com/api/clients/class')
         .then(res => {
             console.log('Response Data', res.data)
+            setInfo(res.data)
         })
         .catch(err => {
             console.log('Error:', err)
         })
     }, [])
-
-    const Form = styled.form `
-        display: flex;
-    `
-    const Button = styled.button `
-        width: 100px;
-        margin: 0 auto;
-    `
-    const Div = styled.div `
-        display: flex;
-        justify-content: space-between;
-    `
 
     return (
         <div>
@@ -51,7 +56,7 @@ const Classes = () => {
                         <select type='time' id='time' name='time' onChange={handleChange}>
                             <option value='earlyMorning'>Early Morning</option>
                             <option value='lateMorning'>Late Morning</option>
-                            <option value='midDay'>Mid-day</option>
+                            <option value='midDay'>Mid-day</option> 
                             <option value='earlyAfternoon'>Early Afternoon</option>
                             <option value='lateAfternoon'>Late Afternoon</option>
                         </select>
@@ -104,6 +109,11 @@ const Classes = () => {
                     }}>Reset</Button>
                 </Div>
             </Form>
+
+            <div>
+                info.map(e => {
+                })
+            </div>
 
             <Link exact to="/"><button>Home</button></Link>
         </div>
