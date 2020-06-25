@@ -1,638 +1,187 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-
-}
-
-
-
-h1 {
-    text-align: center;
-    
-}
-
-.banner2 {
-    margin-left: 25%;
-}
-
-body {
-    margin: 0;
-    font-family: 'open Sans', sans-serif;
-    font-size: 18px;
-    color: #444;
-    text-align: center;
-    background-color: #f7f7f7;
-    overflow: auto;
-}
-
-img {
-    max-width: 100%;
-}
-
-#callout {
-    width: 100%;
-    background-color: #444;
-    height: auto;
-    overflow: hidden;
-}
-
-#callout p {
-    text-align: right;
-    color: black;
-    font-size: 14px;
-    padding-right: 5%;
-}
-
-#callout p a {
-    color: black;
-    text-decoration: none;
-}
-
-header {
-    text-align: left;
-}
-
-/* color for nav  */
-nav {
-    background: #46ACC2;
-    height: 80px;
-    width: 100%;
-}
-
-label.logo {
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding-right: 50%;
-    font-weight: bold;
-
-}
-
-nav ul {
-    float: right;
-    margin-right: 20px;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-a.active,
-a:hover {
-    background: #1b9bff;
-    transition: .5s;
-}
-
-/* nav ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 50px;
-} */
-/* nav ul li {
-    float: left;
-    width: 15%;
-    border: 1px solid #444;
-} */
-/* nav ul li a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #444;
-    display: block;
-    padding: 5% 12%;    
-} */
-/* nav ul li a:hover, nav ul li.active a {
-    background-color: #444;
-    color: #aad400;
-} */
-.left-col {
-    width: 55%;
-    float: left;
-    padding: 1%;
-    text-align: center;
-}
-
-
-
-
-.one-third {
-    width: 29%;
-    float: left;
-    padding: 2%;
-}
-
-.clearfix {
-    clear: both;
-}
-
-footer {
-    background-color: #46ACC2;
-    width: 100%;
-    padding: 6% 0 10%;
-}
-
-.social {
-    font-size: 400%;
-}
-
-.social a {
-    color: black;
-    padding: 3%;
-}
-
-.social a:hover {
-    color: #d5d5d5;
-}
-
-@media (max-width: 1031px) {
-    html {
-    overflow-x: auto;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-
-}
-    .banner2 {
-        /* display: flex; */
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-        margin-left: 10%;
-
-    }
-    /* nav tabs */
-    nav ul {
-        width: 100%;
-        margin-right: 0;
-        background-color: #46ACC2;
-    }
-
-    nav ul li {
-        /* width: 100%; */
-        border-left: 0;
-        border-right: 0;
-        border-width: auto;
-
-    }
-
-    nav ul li a {
-        padding: 8px 0;
-        font-size: 16px;
-        align-content: center;
-
-    }
-
-
-
-    /* 
-    
-    nav ul li a {
-        font-size: 16px;
-    }
-    
-    /* ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background: #0082e6;
-        top: 80px;
-        left: 100%;
-        text-align: center;
-        transition: all .5s;
-    } */
-        /* nav ul li {
-            display: block;
-            margin: 50px 0;
-            line-height: 30px;
-        } */
-    a:hover,
-    a.active {
-        background: #1b9bff;
-        /* color:#1b9bff; */
-    }
-
-    .left-col {
-        width: 100%;
-        padding: 1%;
-
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 0;
-    }
-
-    .one-third {
-        width: 100%;
-        padding: 1%;
-
-    }
-
-    .social {
-        font-size: 200%;
-    }
-
-    p {
-        font-size: 15px;
-    }
-
-    */
-}
-
-@media (max-width: 768px) {
-    .banner2 {
-        width: 100%;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-
-    }
-
-    nav ul {
-        padding-left: 50px;
-        padding-right: 50px;
-        background-color: #46ACC2;
-
-    }
-
-    nav ul li {
-        width: 100%;
-        border-left: 10px;
-        border-right: 0;
-        border: 1px solid white;
-        border-width: auto;
-
-    }
-
-    nav ul li a {
-
-        padding: 8px 0;
-        font-size: 16px;
-
-    }
-
-
-
-    /* 
-    
-    nav ul li a {
-        font-size: 16px;
-    }
-    
-    ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background: #0082e6;
-        top: 80px;
-        left: 100%;
-        text-align: center;
-        transition: all .5s;
-    }
-        /* nav ul li {
-            display: block;
-            margin: 50px 0;
-            line-height: 30px;
-        } */
-    a:hover,
-    a.active {
-        background: #1b9bff;
-        /* color:#1b9bff; */
-    }
-
-    .left-col {
-        width: 100%;
-        padding: 0;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 0;
-    }
-
-    .one-third {
-        width: 100%;
-        padding: 0;
-    }
-
-    .social {
-        font-size: 200%;
-    }
-
-    p {
-        font-size: 15px;
-    }
-
-    */
-}
-
-/* About Section CSS */
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-}
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-}
-.about-section{
-    background: url() no repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
-    overflow: hidden;
-    padding: 100px 0;
-}
-.inner-container{
-    width: 55%;
-    float: right;
-    background-color: #fdfdfd;
-    padding: 150px;
-}
-
-.inner-container h1{
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
-}
-.text{
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-.skills{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
-}
-
-@media screen and (max-width: 1200px){
-    .inner-container{
-        padding: 80px;
-    }
-}
-
-@media screen  and (max-width: 1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-    padding: 60px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Contact Section CSS */
-body {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Times New Roman', Times, serif;}
-
-.container {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
-
-#contact-section {
-    background-color: white ;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    padding-bottom: 2%;
-}
-
-#contact-section .container h2 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-position: under;
-    color: rgba(238,235,235);
-    letter-spacing: 2px;
-}
-
-#contact-section .container p {
-    text-align: center;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 3%;
-    color: black;
-    letter-spacing: 3px;
-}
-
-#contact-form i.fa{
-    font-size: 22px;
-    padding: 3%;
-    background-color: none;    
-    margin: 2%;
-    border-radius: 80%;
-    cursor: pointer
-    border: 2px solid rgba(190,190,190);
-    color: rgba(190,190,190);
-}
-#contact-form i.faf:hover{
-    cursor: pointer;
-    border: 2px solid black;
-    color: black;
-}
-
-.contact-form{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.form-info{
-    font-size: 16px;
-    /* font-style: italic; */
-    color: black;
-    letter-spacing: 2px;
-}
-
-input{
-    padding: 10px;
-    margin: 10px;
-    width: 70%;
-    background-color: rgba(136,133,133,0.5);
-    color: #fff;
-    border: none;
-    outline: none;
-}
-
-input::placeholder{
-    color: black;
-}
-textarea{
-    padding: 10px;
-    margin: 10px;
-    width: 70%;
-    background-color: rgbaa(136,,133,0.5);
-    color: #fff;
-    border: none;
-    outline: none;
-}
-
-textarea::placeholder{
-    color: #fff;
-}
-
-.submit{
-    width: 40%;
-    background: none;
-    padding: 4px;
-    outline: none;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 33px;
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 2px;
-    margin-left: 3%;
-    border: 2px solid rgba(190,,190,190);
-    color: rgba(190,,190,190);
-}
-
-.submit:hover{
-    border: 1px solid #fff;
-    color: #fff;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-#contact-section .contact-form{
-    display: block;
-    width: 100%;
-    text-align: center;
- }
-
- #contact-section .submit{
-     width: 60%;
- }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Anywhere Fitness</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+	</header>
+
+	<Nav>
+		<label>Anywhere Fitness</label>
+
+		<ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Pricing</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</Nav>
+	<div class="banner">
+		<img src="img/banner.png">
+	</div>
+
+	<div class="left-col">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+	</div>
+
+	<!-- <div class="sidebar">
+		<img src="img/sitting.png">
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="one-third">
+		<h3>at Home</h3>
+		<img src="img/fitness2.png">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+		</p>
+	</div>
+	<div class="one-third">
+		<h3>With friends</h3>
+		<img src="img/stretching.png">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+	</div>
+
+	<div class="one-third">
+		<h3>Outside</h3>
+		<img src="img/lifting2.png">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+	</div>
+
+	<footer>
+		<div class="social">
+			<a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+
+		</div>
+	</footer>
+
+</body>
+
+</html>-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>HTML5 Website - Serenity Fitness Studio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Anywhere Fitness</h1>
+	</header>
+
+	<Nav>
+		<ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Facility</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Pricing</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</Nav>
+	<div class="banner">
+		<img src="img/banner.png">
+		<img src="img/heading2.png">
+	</div>
+
+	<div class="left-col">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+	</div>
+
+	<div class="sidebar">
+		<img src="img/sitting.png">
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="one-third">
+		<h3>Fitness Classes</h3>
+		<img src="img/fitness2.png">
+		<p>
+			<p>Be part of a community that moves and motivates together. All
+				classes are included in your membership and are the perfect way
+				to stay inspired and challenged, all while having a good time. one
+				of our favorite new classes sets focuses on building strong legs and
+				glutes</p>
+		</p>
+	</div>
+	<div class="one-third">
+		<h3>Yoga Classes</h3>
+		<img src="img/stretching.png">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+	</div>
+
+	<div class="one-third">
+		<h3>lifting</h3>
+		<img src="img/lifting2.png">
+		<p>Be part of a community that moves and motivates together. All
+			classes are included in your membership and are the perfect way
+			to stay inspired and challenged, all while having a good time. one
+			of our favorite new classes sets focuses on building strong legs and
+			glutes</p>
+	</div>
+	<div class="banner">
+		<img src="img/heading2.png">
+	</div>
+	<footer>
+		<div class="social">
+			<a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+
+		</div>
+	</footer>
+
+</body>
+
+</html>
