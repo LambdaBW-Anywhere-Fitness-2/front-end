@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Axios from 'axios';
-import ClassCard from './classCard';
+import ClassCard from '../components/classCard';
 
 const Form = styled.form `
         display: flex;
@@ -14,7 +14,10 @@ const Form = styled.form `
     const Div = styled.div `
         display: flex;
         justify-content: space-between;
-        color: 
+    `
+    const ClassDiv = styled.div `
+        width: 30%;
+        margin: 0 auto;
     `
 
 const ClientClasses = () => {
@@ -59,6 +62,7 @@ const ClientClasses = () => {
                     <label htmlFor='time'>
                         Class Time
                         <select type='time' id='time' name='time' onChange={handleChange}>
+                            <option>---Select Option---</option>
                             <option value='earlyMorning'>Early Morning</option>
                             <option value='lateMorning'>Late Morning</option>
                             <option value='midDay'>Mid-day</option> 
@@ -72,13 +76,14 @@ const ClientClasses = () => {
                     </label>
                     <label htmlFor='location'>
                         Class location
-                        <input type='text' id='location' name='location' value={classInfo.location} onChange={handleChange}/>
+                        <input type='text' id='location' name='location' value={classInfo.location} onChange={handleChange} placeholder='Insert Location...'/>
                     </label>
                 </Div>
                 <Div>
                     <label htmlFor='duration'>
                         Class Duration
                         <select id='duration' name='duration' value={classInfo.duration} onChange={handleChange} >
+                            <option>---Select Option---</option>
                             <option value='0-15Min'>0-15 Minutes</option>
                             <option value='15-30Min'>15-30 Minutes</option>
                             <option value='30-45Min'>30-45 Minutes</option>
@@ -88,6 +93,7 @@ const ClientClasses = () => {
                     <label htmlFor='size'>
                         Class size
                         <select id='size' name= 'size' value={classInfo.size} onChange={handleChange} >
+                            <option>---Select Option---</option>
                             <option value='small'>Small</option>
                             <option value='average'>Medium</option>
                             <option value='large'>Large</option>
@@ -96,12 +102,13 @@ const ClientClasses = () => {
                     <label htmlFor='intensity'>
                         Class intensity
                         <select id='intensity' name='intensity' value={classInfo.intensity} onChange={handleChange}>
-                            <option value='easy'>Easy</option>
-                            <option value='medium'>Medium</option>
-                            <option value='hard'>Hard</option>
+                            <option>---Select Option---</option>
+                            <option value='beginner'>Beginner</option>
+                            <option value='intermediate'>Intermediate</option>
+                            <option value='advanced'>Advanced</option>
                         </select>
                     </label>
-                    <Button type='submit'>Submit</Button>
+                    <Button type='submit'>Search</Button>
                     <Button type='reset' onClick={() => {
                         setClassInfo({
                             time: '', 
@@ -114,12 +121,11 @@ const ClientClasses = () => {
                     }}>Reset</Button>
                 </Div>
             </Form>
-
-            <div>
-                info.map(e => {
-                })
-            </div>
-
+                <ClassDiv>
+                    {info.map(e => {
+                        return <ClassCard name={e.class_name} teacher={e.instructor_name} location={e.location} date={e.start_date} duration={e.duration} time={e.start_time}/>
+                    })}
+                </ClassDiv>
             <Link exact to="/"><button>Home</button></Link>
         </div>
 

@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
-<<<<<<< HEAD
 // import Button from 'react-bootstrap/Button'
-=======
-// import { Button } from "react-bootstrap";
-// import Spinner from "react-bootstrap/Spinner";
-
->>>>>>> chrisWestberg
 
 const ClientSignup = props => {
     const [credentials, setCredentials] = useState({
@@ -74,19 +68,14 @@ const ClientSignup = props => {
                     required
                 />
 
-<<<<<<< HEAD:src/users/userSignup.js
                 <button type="submit">
-                    {/* {!credentials && < Spinner
-=======
-                <Button type="submit">
-                    {isFetching ? (< Spinner className="mx-2"
->>>>>>> 7e76e2c73f19a5e04a60001dcff6ec8cc93f84c3:src/clients/clientSignup.js
+                    {/* {/* {!credentials && < Spinner
                         as="span"
                         animation="border"
                         size="sm"
                         role="status"
                         aria-hidden="true"
-                    />) : ""}
+                    />) : ""} */}
 
                     Sign Up
                 </button>
