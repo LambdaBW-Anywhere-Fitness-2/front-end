@@ -44,7 +44,7 @@ const ClientSignup = props => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h3>Sign Up</h3>
+                <h4 className="clientSignUpTitle">Client Sign Up</h4>
                 <input
                     type="text"
                     placeholder="Full Name"
@@ -69,7 +69,9 @@ const ClientSignup = props => {
                     onChange={handleChange}
                     required
                 />
-
+                <br />
+                <Link to="/login" className="already">I already have a client account</Link>
+                <br />
                 <Button type="submit">
                     {isFetching ? (< Spinner className="mx-2"
                         as="span"
@@ -78,13 +80,12 @@ const ClientSignup = props => {
                         role="status"
                         aria-hidden="true"
                     />) : ""}
-
                     Sign Up
                 </Button>
                 <br />
-                <Link to="/login">I already have a client account</Link>
-                <br></br>
                 <Link exact to="/"><Button>Home</Button></Link>
+
+
 
             </form>
         </div>

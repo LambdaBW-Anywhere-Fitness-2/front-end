@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
 
 const Login = props => {
     const [credentials, setCredentials] = useState({})
@@ -34,9 +36,9 @@ const Login = props => {
     }
 
     return (
-        <div>
+        <div className="login">
             <form onSubmit={login}>
-                <h3>Sign In</h3>
+                <h2>Sign In</h2>
                 <input
                     type="email"
                     placeholder="Email"
@@ -53,10 +55,11 @@ const Login = props => {
                     onChange={handleChange}
                     required
                 />
-                <button type="submit">Sign In</button>
-
+                <br />
+                <Button type="submit">Sign In</Button>
             </form>
-            <Link exact to="/"><button>Home</button></Link>
+            <br />
+            <Link exact to="/"><Button>Home</Button></Link>
 
         </div>
     )

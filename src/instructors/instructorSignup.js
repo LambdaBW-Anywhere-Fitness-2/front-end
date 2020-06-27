@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { Button } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
+
 
 
 
 const InstructorSignup = props => {
+    const [isFetching, setIsFetching] = useState(false)
+
     const [instructorCredentials, setinstructorCredentials] = useState({
         name: "",
         email: "",
@@ -33,6 +37,7 @@ const InstructorSignup = props => {
                 //     password: ""
                 // });
                 props.history.push("/login");
+                setIsFetching(false);
             })
             .catch(err => {
                 console.error(err.message)
@@ -42,7 +47,7 @@ const InstructorSignup = props => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h3>Sign Up</h3>
+                <h3 className="instructorSignUpTitle">Instructor Sign Up</h3>
                 <input
                     type="text"
                     placeholder="Full Name"
@@ -75,14 +80,24 @@ const InstructorSignup = props => {
                     onChange={handleChange}
                     required
                 />
-
+                <br />
+                <Link to="/login" className="already">I already have an instructor account</Link>
+                <br />
                 <Button type="submit">
+                    {isFetching ? (< Spinner className="mx-2"
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                    />) : ""}
                     Sign Up
                 </Button>
+
                 <br />
-                <Link to="/login">I already have an instructor account</Link>
-                <br></br>
                 <Link exact to="/"><Button>Home</Button></Link>
+
+
 
             </form>
         </div>

@@ -6,13 +6,13 @@ const Homepage = () => {
 
 
 
-        <div>
-            <h4> Homepage</h4>
-            {/* <FitnessRoutes /> */}
+        <div className="homepage">
+            <h4 className="homepagetitle"> Homepage</h4>
+            <br />
             <Link to="/login">Log In</Link>
-            <br></br>
+            {/* <br></br> */}
             <Link to="/userSignup">Client Signup</Link>
-            <br></br>
+            {/* <br></br> */}
             <Link to="/instructorSignup">Instructor Signup</Link>
         </div>
 

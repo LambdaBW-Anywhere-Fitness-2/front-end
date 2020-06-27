@@ -12,7 +12,7 @@ import FitnessRoutes from "./components/routes/Routes";
 function App() {
   return (
     <div className="App">
-      <h2>Anywhere Fitness</h2>
+      <h2 className="title">Anywhere Fitness</h2>
       <FitnessRoutes />
 
 
