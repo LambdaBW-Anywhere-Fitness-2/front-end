@@ -7,7 +7,9 @@
     list-style: none;
     box-sizing: border-box;
 }
-
+img {max-width: 100%;
+  height: auto;
+}
 
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -308,7 +310,6 @@ footer {
         padding-right: 50px;
         padding-bottom: 50px;
         background-color: #46ACC2;
-        border: 5px solid red;
 
     }
 
@@ -356,11 +357,20 @@ footer {
         background: #1b9bff;
         /* color:#1b9bff; */
     }
-
     .left-col {
+        margin-left: 0%;
         width: 100%;
-        padding: 0;
+        /* float: left; */
+        padding: 1%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
     }
+    /* .left-col {
+        width: 100%;
+        margin-right: 20%;
+                
+    } */
 
     .sidebar {
         width: 100%;
@@ -370,6 +380,8 @@ footer {
     .one-third {
         width: 100%;
         padding: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
     .social {
