@@ -20,6 +20,7 @@ label.logo {
     line-height: 80px;
     padding-right: 50%;
     font-weight: bold;
+    
 
 }
 
@@ -29,6 +30,7 @@ nav ul li a {
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    
 }
 
 a.active,
@@ -140,17 +142,20 @@ nav ul li {
     color: #aad400;
 } */
 .left-col {
+    margin-left: 20%;
     width: 55%;
     float: left;
     padding: 1%;
-    text-align: center;
 }
 
 
 
 
 .one-third {
-    width: 29%;
+    display: inline-flexbox
+    justify-content: space-around;
+    margin-left: 2%;
+    width: 30%;
     float: left;
     padding: 2%;
 }
@@ -192,18 +197,14 @@ footer {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+        
     }
 
     h1 {
         text-align: center;
     }
 
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-        margin-left: 10%;
-
-    }
+    
 
     /* nav tabs */
     nav ul {
@@ -286,6 +287,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+    label.logo {
+        display: inline-flexbox;
+        justify-content: center;
+        padding: 8px 0;
+        font-size: x-large;
+    }
     .banner2 {
         width: 100%;
     }
@@ -299,7 +306,9 @@ footer {
     nav ul {
         padding-left: 50px;
         padding-right: 50px;
+        padding-bottom: 50px;
         background-color: #46ACC2;
+        border: 5px solid red;
 
     }
 
@@ -309,6 +318,7 @@ footer {
         border-right: 0;
         border: 1px solid white;
         border-width: auto;
+        
 
     }
 
