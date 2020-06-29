@@ -21,7 +21,6 @@ img {max-width: 100%;
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    
 }
 
 label.logo {
@@ -31,7 +30,6 @@ label.logo {
     padding-right: 10%;
     padding-left: 3%;
     font-weight: bold;
-    border: 5px solid red;
 
 
 
@@ -45,10 +43,13 @@ nav ul li a {
     text-transform: uppercase;
     
 }
-
+a:hover,a:active{
+    background: none;
+    color: black;
+}
 a.active,
 a:hover {
-    background: #1b9bff;
+    background: none;
     transition: .5s;
 }
 <!-- 500px and below -->
@@ -61,6 +62,11 @@ a:hover {
     nav ul li a {
         font-size: 16px;
     }
+}
+
+a:hover,a:active{
+    background: none;
+    color: black;
 }
 /*index section */
 h1 {
@@ -149,7 +155,9 @@ nav ul li {
 footer {
     background-color: #46ACC2;
     width: 100%;
-    padding: 6% 0 10%;
+    padding: 3% 0 2%;
+    /* padding-top: 10%; */
+
 }
 
 .social {
@@ -157,12 +165,12 @@ footer {
 }
 
 .social a {
-    color: black;
+    color: white;
     padding: 3%;
 }
 
 .social a:hover {
-    color: #d5d5d5;
+    color: black;
 }
 
 @media (max-width: 1031px) {
@@ -236,7 +244,7 @@ footer {
         } */
     a:hover,
     a.active {
-        background: #1b9bff;
+        background: black;
         /* color:#1b9bff; */
     }
 
@@ -338,7 +346,7 @@ footer {
         } */
     a:hover,
     a.active {
-        background: #1b9bff;
+        background: none;
         /* color:#1b9bff; */
     }
     .left-col {

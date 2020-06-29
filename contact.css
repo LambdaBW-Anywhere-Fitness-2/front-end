@@ -5,244 +5,224 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    
-    
-}
-body {
-    font-family: 'Times New Roman', Times, serif;
+  }
+  body {
+    font-family: "Times New Roman", Times, serif;
     overflow: hidden;
-    
-    
-}
-/* navbar color */
-label.logo {
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding-right: 10%;
-    padding-left: 3%;
-    font-weight: bold;
-    border: 5px solid red;
+  }
 
-
-
-}
-
-nav ul li a {
+  /* navbar color */
+  nav ul li a {
     color: white;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
-    
-}
-
-a.active,
-a:hover {
-    background: #1b9bff;
-    transition: .5s;
-}
-
-
-nav {
+  }
+  nav {
     background: #46acc2;
     height: 80px;
     width: 100%;
-}
-label.logo {
+  }
+  label.logo {
     color: white;
     font-size: 35px;
     line-height: 80px;
     padding-right: 10%;
     padding-left: 20%;
     font-weight: bold;
-}
-nav ul {
+  }
+  nav ul {
     float: right;
     margin-right: 20px;
-}
-nav ul li {
+  }
+  nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
-}
-
-nav ul li a {
+  }
+  nav ul li a {
     color: white;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
-    text-transform: uppercase; 
-}
-a.active,
-a:hover {
+    text-transform: uppercase;
+  }
+  a:hover,
+  a:active {
+    background: none;
+    color: black;
+  }
+  a.active,
+  a:hover {
     background: #46acc2;
-    transition: .5s;
-}
-
-/* */
-body{
-    padding: 0px;
-    margin: 0px;  
-    font-family: sans-serif;
+    transition: 0.5s;
+  }
   
-}   
+  /*Body Section */
+  body {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  /* contact form css */
+  #contact-section {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+  }
+  #contact-section .container h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: black;
+    letter-spacing: 2px;
+    padding-bottom: 3%;
+  }
+  #contact-section .container p {
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%;
+    color: black;
+    letter-spacing: 3px;
+  }
+  .contact-form i.fa {
+    font-size: 22px;
+    padding: 3%;
+    background-color: none;
+    border-radius: 80%;
+    margin: 2%;
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+  }
+  
+  .contact-form i.fa:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    color: #46acc2;
+  }
+  .contact-form {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .form-info {
+    font-size: 16px;
+    font-style: italic;
+    color: black;
+    letter-spacing: 2px;
+  }
+  input {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: rgba(136, 133, 133, 0.5);
+    color: black;
+    border: none;
+    outline: none;
+  }
+  input::placeholder {
+    color: black;
+  }
+  textarea {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    background-color: rgba(136, 133, 133, 0.5);
+    color: black;
+    border: none;
+    outline: none;
+  }
+  textarea::placeholder {
+    color: black;
+  }
+  .submit {
+    width: 40%;
+    background: none;
+    padding: 4px;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 33px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-left: 3%;
+    border: 2px solid rgb(190, 190, 190);
+    color: black;
+  }
+  
+  .submit:hover {
+    border: 1px solid #46acc2;
+    color: black;
+    cursor: pointer;
+  }
+  footer {
+    background-color: #46acc2;
+    padding-top: 3%;
+    width: 100%;
+  }
+  .social {
+    padding-bottom: 5%;
+    display: flexbox;
+    text-align: center;
+    font-size: 400%;
+  }
+  .social a {
+    color: white;
+    padding: 3%;
+  }
+  .social a:hover {
+    color: black;
+  }
 
- .container{
-      width: 90%;
-      margin: auto;
-      overflow: hidden;
-    }
-    /* contact form css */
 
 
-    #contact-section{
-      background-color: white;
-      background-size: cover;
-      background-position: center;
-      height: 100%;
-      width: 100% ;
-      padding-bottom: 3%;
-      padding-top: 3%;
-      
-    }
 
-    #contact-section .container h2{
-      text-align: center;
-       text-decoration: underline;
-        /* text-decoration-color:red; */
-        text-underline-position: under;
-        color: black;
-        letter-spacing: 2px;
-        padding-bottom: 3%;
-        
-    }
 
+    @media (max-width: 1031px){
+
+    } 
     
 
-    #contact-section .container p{
-      text-align: center; 
-      width: 70%; 
-      margin-left: auto;
-       margin-right: auto; 
-       padding-bottom: 3%;
-       color: black;
-       letter-spacing:3px;
-    }
-
-    .contact-form i.fa{
-      /* color: red; */
-      /* color: #fff; */
-      font-size: 22px; 
-      padding: 3%;
-      background-color: none;
-      border-radius: 80%;
-      margin: 2%;
-      /* border: 2px solid #fff; */
-      cursor: pointer;
-      border:2px solid black;
-      color: black;
-    }
-    
-    .contact-form i.fa:hover{
-      cursor: pointer;
-      border:2px solid black;
-      color: #46ACC2;
-    }
-     
-      .contact-form{
-        display: grid;
-        grid-template-columns: auto auto;
-         }
-      
-      .form-info{
-        font-size: 16px;
-        font-style: italic;
-        color: black;
-        letter-spacing: 2px;
-      }
-      input{
-        padding: 10px;
-        margin:10px;
-        width: 70%;
-        background-color:rgba(136, 133, 133, 0.5);
-        color: black;
-        border: none;
-        outline:none;
-      }
-
-      input::placeholder{
-        color: black;
-      }
-    
-       textarea{
-      padding: 10px;
-      margin: 10px;     
-      width: 70%;
-      background-color:rgba(136, 133, 133, 0.5);
-      color: black;
-      border: none;
-      outline:none;
-     }
-     textarea::placeholder{
-       color: black;
-     }
-     
-      
-    
-      .submit{
-      width: 40%;
-      background: none;
-      padding: 4px;
-      outline: none;
-       /* border: 1px solid #fff;
-      color: #fff; */
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      height: 33px;
-      text-align: center;
-      cursor: pointer;
-      letter-spacing: 2px;
-      margin-left: 3%;
-      border:2px solid rgb(190, 190, 190);
-      color: black;
-     }
-
-     .submit:hover{
-           border: 1px solid #46acc2;
-      color: black;
-      cursor: pointer;
-     }
-     footer {
-        background-color: #46ACC2;
-        padding-top: 3%;
-        width: 100%;
 
 
-    }
-    
-    .social {
-        padding-bottom: 5%;
-        display: flexbox;
-        text-align: center;
-        font-size: 400%;
-        
 
-    }
-    
-    .social a {
-        color: white;
-        padding: 3%;
-    }
-    
-    .social a:hover {
-        color: black;
-    }
-     
-    
 
      @media (max-width: 952px){
+        label.logo {
+            font-size: 30px;
+            padding-right: 100%;
+            width: 100%;
+            border: 5px solid red;
+        }
+        nav ul li a {
+            color: black;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            
+        }
+
+        nav {
+            background: #46ACC2;
+            height: 80px;
+            width: 100%;
+        }
+        
      footer {
         background-color: #46ACC2;
         width: 100%;
@@ -270,10 +250,11 @@ body{
         display: block;
         width: 100%;
         text-align: center;
+        
       }
       #contact-section .submit{
-
         width: 60%;
+        
       }
 
   }
