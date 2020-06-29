@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import Axios from 'axios';
-import ClassCard from '../components/classCard';
+import ClassCard from '../BackupclientClassCard';
 
-const Form = styled.form `
+const Form = styled.form`
         display: flex;
     `
-    const Button = styled.button `
+const Button = styled.button`
         width: 100px;
         margin: 0 auto;
     `
-    const Div = styled.div `
+const Div = styled.div`
         display: flex;
         justify-content: space-between;
     `
-    const ClassDiv = styled.div `
+const ClassDiv = styled.div`
         width: 30%;
         margin: 0 auto;
     `
@@ -38,13 +38,13 @@ const ClientClasses = () => {
 
     useEffect(() => {
         Axios.get('https://anywherefitnessapp.herokuapp.com/api/clients/class')
-        .then(res => {
-            console.log('Response Data', res.data)
-            setInfo(res.data)
-        })
-        .catch(err => {
-            console.log('Error:', err)
-        })
+            .then(res => {
+                console.log('Response Data', res.data)
+                setInfo(res.data)
+            })
+            .catch(err => {
+                console.log('Error:', err)
+            })
     }, [])
 
     return (
@@ -65,18 +65,18 @@ const ClientClasses = () => {
                             <option>---Select Option---</option>
                             <option value='earlyMorning'>Early Morning</option>
                             <option value='lateMorning'>Late Morning</option>
-                            <option value='midDay'>Mid-day</option> 
+                            <option value='midDay'>Mid-day</option>
                             <option value='earlyAfternoon'>Early Afternoon</option>
                             <option value='lateAfternoon'>Late Afternoon</option>
                         </select>
                     </label>
                     <label htmlFor='date'>
                         Class Date
-                        <input type='date' id='date' name='date' value={classInfo.date} onChange={handleChange}/>
+                        <input type='date' id='date' name='date' value={classInfo.date} onChange={handleChange} />
                     </label>
                     <label htmlFor='location'>
                         Class location
-                        <input type='text' id='location' name='location' value={classInfo.location} onChange={handleChange} placeholder='Insert Location...'/>
+                        <input type='text' id='location' name='location' value={classInfo.location} onChange={handleChange} placeholder='Insert Location...' />
                     </label>
                 </Div>
                 <Div>
@@ -92,7 +92,7 @@ const ClientClasses = () => {
                     </label>
                     <label htmlFor='size'>
                         Class size
-                        <select id='size' name= 'size' value={classInfo.size} onChange={handleChange} >
+                        <select id='size' name='size' value={classInfo.size} onChange={handleChange} >
                             <option>---Select Option---</option>
                             <option value='small'>Small</option>
                             <option value='average'>Medium</option>
@@ -111,21 +111,21 @@ const ClientClasses = () => {
                     <Button type='submit'>Search</Button>
                     <Button type='reset' onClick={() => {
                         setClassInfo({
-                            time: '', 
-                            date: '', 
-                            location: '', 
-                            duration: '', 
-                            size: '', 
+                            time: '',
+                            date: '',
+                            location: '',
+                            duration: '',
+                            size: '',
                             intensity: ''
                         })
                     }}>Reset</Button>
                 </Div>
             </Form>
-                <ClassDiv>
-                    {info.map(e => {
-                        return <ClassCard name={e.class_name} teacher={e.instructor_name} location={e.location} date={e.start_date} duration={e.duration} time={e.start_time}/>
-                    })}
-                </ClassDiv>
+            <ClassDiv>
+                {info.map(e => {
+                    return <ClassCard name={e.class_name} teacher={e.instructor_name} location={e.location} date={e.start_date} duration={e.duration} time={e.start_time} />
+                })}
+            </ClassDiv>
             <Link exact to="/"><button>Home</button></Link>
         </div>
 
