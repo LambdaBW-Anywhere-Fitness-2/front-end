@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axioswithAuth from "../utils/axiosWithAuth";
 import ClassCard from './ClassCard';
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
 const UpdateInstructorClasses = props => {
     // console.log(props);
@@ -61,8 +59,6 @@ const UpdateInstructorClasses = props => {
 
             {classData.map((classes, index) => <ClassCard setUpdate={setUpdate} classData={classData} setClassData={setClassData}
                 key={index} id={classes.id} data={classes} />)}
-            <Link exact to="/"><Button>Home</Button></Link>
-
         </div>
     )
 }
