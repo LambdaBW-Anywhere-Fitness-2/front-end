@@ -2,12 +2,12 @@ import React from "react";
 import { Route } from "react-router-dom";
 import UserSignup from "../../clients/clientSignup";
 import ClientClasses from "../../clients/clientClasses";
+import InstructorClasses from "../../instructors/instructorClasses";
 import Login from "../Login";
 import Homepage from "../homepage";
 import PrivateRoute from "./PrivateRoute";
-import InstructorClasses from "../../instructors/instructorClasses";
 import InstructorSignup from "../../instructors/instructorSignup";
-import UpdateInstructorClasses from "../../instructors/updateInstructorClass";
+
 
 const FitnessRoutes = () => {
     return (
@@ -19,8 +19,7 @@ const FitnessRoutes = () => {
             <Route path="/instructorSignup" component={InstructorSignup} />
             <Route path="/login" component={Login} />
             <Route path="/homePage" component={Homepage} />
-            <Route path="/updateInstructorClass" component={UpdateInstructorClasses} />
-
+           
 
 
         </div>

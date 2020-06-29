@@ -1,4 +1,5 @@
 // import logo from "./logo.svg";
+import React from 'react';
 import "./App.css";
 import FitnessRoutes from "./components/routes/Routes";
 
@@ -11,10 +12,10 @@ import FitnessRoutes from "./components/routes/Routes";
 function App() {
   return (
     <div className="App">
-      <h2 className="title">Anywhere Fitness</h2>
+      <h2>Anywhere Fitness</h2>
       <FitnessRoutes />
 
-
+      
     </div>
   );
 };
