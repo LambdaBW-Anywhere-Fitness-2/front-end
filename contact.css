@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 /* Heading & Navbar */
 * {
     padding: 0;
@@ -58,7 +60,7 @@
     background: #46acc2;
     transition: 0.5s;
   }
-  
+
   /*Body Section */
   body {
     padding: 0px;
@@ -173,6 +175,7 @@
     background-color: #46acc2;
     padding-top: 3%;
     width: 100%;
+    
   }
   .social {
     padding-bottom: 5%;
