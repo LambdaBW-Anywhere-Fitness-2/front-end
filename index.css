@@ -212,7 +212,7 @@ footer {
     */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     label.logo {
         display: inline-flexbox;
         justify-content: center;
