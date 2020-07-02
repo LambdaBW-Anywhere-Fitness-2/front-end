@@ -238,7 +238,6 @@ footer {
         padding-left: 30%;
         /* padding: 8px 0; */
         font-size: x-large;
-        border: 5px solid red;
 
     }
    
@@ -264,6 +263,8 @@ footer {
         /* padding-left: 30%; */
         /* padding: 8px 0; */
         font-size: 16px;
+        border: 5px solid red;
+
     }
    
     /* 
@@ -286,10 +287,10 @@ footer {
     a:hover,
     a.active {
         background: none;
+        color:black;
     }
-    
     .social {
-        font-size: 100%;
+        font-size: 80%;
     }
     p {
         font-size: 15px;

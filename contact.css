@@ -236,12 +236,12 @@
     }
     
     .social a {
-        color: black;
+        color: white;
         padding: 3%;
     }
     
     .social a:hover {
-        color: #d5d5d5;
+        color: black;
     }
 
 
@@ -269,7 +269,6 @@
         padding-bottom: 50px;
         background-color: #46ACC2;
         width: 100%;
-        border: 5px solid red;
         border-width: 200%;
     }
     nav ul li {
@@ -278,15 +277,18 @@
         border-right: 0;
         border: 1px solid white;
         border-width: auto;
+        
 
     }
     nav ul li a {
         display: flex;
         justify-content: center;
+        color: white;
         /* padding-left: 30%; */
         /* padding: 8px 0; */
         font-size: 16px;
-        
+        border: 5px solid red;
+
     }
     #contact-section .contact-form{
       display: block;
@@ -331,7 +333,7 @@
     }
     
     .social {
-        font-size: 300%;
+        font-size: 310%;
         padding-top: 10%;
     }
     p {
