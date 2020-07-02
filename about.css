@@ -7,9 +7,12 @@
     list-style: none;
     box-sizing: border-box;
 }
+p{
+    color: #46ACC2;
+}
 body {
     font-family: 'Times New Roman', Times, serif;
-    color: black;
+    color: #46ACC2;
 }
 
 .column
@@ -54,6 +57,7 @@ a:hover,a:active{
 /*index section */
 h1 {
     text-align: center;
+    color: #46ACC2;
 
 }
 body {
@@ -93,16 +97,21 @@ nav ul li {
 /* Footer Section */
 footer {
     background-color: #46ACC2;
+    padding-top: 3%;
     width: 100%;
-    padding: 3% 5% 3%;
 
 }
 .social {
-    font-size: 400%;
+    font-size: 100%;
+    padding-bottom: 5%;
+    display: flexbox;
+    text-align: center;
 }
 .social a {
-    color: black;
+    font-size: 400%;
+    color: white;
     padding: 3%;
+
 }
 .social a:hover {
     color: black;
@@ -130,7 +139,7 @@ footer {
 
   .title
   {
-      color:gray;
+      color:#46ACC2;
       font-size:18px;
   }
 
@@ -151,7 +160,7 @@ footer {
   a{
       text-decoration: none;
       font-size:22px;
-      color:black;
+      color:#46ACC2;
   }
 
   a:hover,button:hover{
@@ -225,10 +234,12 @@ footer {
 
 @media (max-width: 768px) {
     label.logo {
-        display: inline-flexbox;
-        justify-content: center;
-        padding: 8px 0;
+        display: flexbox;
+        padding-left: 30%;
+        /* padding: 8px 0; */
         font-size: x-large;
+        border: 5px solid red;
+
     }
    
     h1 {
@@ -248,7 +259,10 @@ footer {
         border-width: auto;
     }
     nav ul li a {
-        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        /* padding-left: 30%; */
+        /* padding: 8px 0; */
         font-size: 16px;
     }
    
@@ -275,10 +289,9 @@ footer {
     }
     
     .social {
-        font-size: 200%;
+        font-size: 100%;
     }
     p {
         font-size: 15px;
     }
-    */
 }
