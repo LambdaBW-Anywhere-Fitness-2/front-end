@@ -192,18 +192,6 @@
   }
 
 
-
-
-
-    @media (max-width: 1031px){
-
-    } 
-    
-
-
-
-
-
      @media (max-width: 952px){
         label.logo {
             font-size: 30px;
@@ -251,104 +239,300 @@
         overflow-x: auto;
       }
       
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+      * {
+          padding: 0;
+          margin: 0;
+          text-decoration: none;
+          list-style: none;
+          box-sizing: border-box;
+      }
+      p{
+          color: #46ACC2;
+      }
+      body {
+          font-family: 'Times New Roman', Times, serif;
+          color: #46ACC2;
+      }
+      
+      .column
+        {
+            width:25%;
+            float:left;
+            padding:50px 10px;
+        }
+        .row:after{
+          content:"";
+          display:table;
+          clear:both;
+      }
+      
       label.logo {
-        margin-left: 30%;
-        padding-left: 60%;
-        padding: 8px 0;
-        font-size: x-large;
-
-
-    }
-   
-    h1 {
-        text-align: center;
-    }
-    nav ul {
-        padding-left: 80px;
-        padding-right: 50px;
-        padding-bottom: 50px;
-        background-color: #46ACC2;
-        width: 100%;
-        border-width: 200%;
-    }
-    nav ul li {
-        width: 110%;
-        border-left: 20px;
-        border-right: 0;
-        border: 1px solid white;
-        border-width: auto;
-        
-
-    }
-    nav ul li a {
-        display: flex;
-        justify-content: center;
-        color: white;
-        /* padding-left: 30%; */
-        /* padding: 8px 0; */
-        font-size: 16px;
-        border: 5px solid red;
-
-    }
-    #contact-section .contact-form{
-      display: block;
-      width: 100%;
-      text-align: center;
+          color: white;
+          font-size: 35px;
+          line-height: 80px;
+          padding-right: 10%;
+          padding-left: 3%;
+          font-weight: bold;
+      }
+      nav ul li a {
+          color: white;
+          font-size: 17px;
+          padding: 7px 13px;
+          border-radius: 3px;
+          text-transform: uppercase;    
+      }
+      a:hover,a:active{
+          background: none;
+          color: black;
+      }
+      nav ul li a {
+          font-size: 16px;
+          }
+      a:hover,a:active{
+          background: none;
+          color: black;
+      }
+      
+      /*index section */
+      h1 {
+          text-align: center;
+          color: #46ACC2;
+      
+      }
+      body {
+          margin: 0;
+          font-family: 'open Sans', sans-serif;
+          font-size: 18px;
+          color: #46ACC2;
+          text-align: center;
+          background-color: #f7f7f7;
+          overflow: auto;
+      }
       
       
-    }
-    #contact-section .submit{
-      width: 60%;
       
-    }
-    #contact-section .container h2 {
-      text-align: center;
-      text-decoration: underline;
-      text-underline-position: under;
-      color: black;
-      letter-spacing: 2px;
-      padding-top: 3%;
-    }
-   
-    /* 
-    ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background: #0082e6;
-        top: 80px;
-        left: 100%;
-        text-align: center;
-        transition: all .5s;
-    }
-        /* nav ul li {
-            display: block;
-            margin: 50px 0;
-            line-height: 30px;
-        } */
-    a:hover,
-    a.active {
-        background: none;
-    }
-    
-    .social {
-        font-size: 310%;
-        padding-top: 10%;
-    }
-    p {
-        font-size: 15px;
-    }
-
-
-  }
-
-  /* footer */
-  .clearfix {
-    clear: both;
-}
-
-
-
-
-   
+      header {
+          text-align: left;
+      }
+      
+      /* Navbar Portion  */
+      nav {
+          background: #46ACC2;
+          height: 80px;
+          width: 100%;
+      }
+      nav ul {
+          float: right;
+          margin-right: 20px;
+      }
+      nav ul li {
+          display: inline-block;
+          line-height: 80px;
+          margin: 0 5px;
+      }
+      /* Body Sectiong */
+      
+      
+      /* Footer Section */
+      footer {
+          background-color: #46ACC2;
+          padding-top: 3%;
+          width: 100%;
+      
+      }
+      .social {
+          font-size: 100%;
+          padding-bottom: 5%;
+          display: flexbox;
+          text-align: center;
+      }
+      .social a {
+          font-size: 400%;
+          color: white;
+          padding: 3%;
+      
+      }
+      .social a:hover {
+          color: black;
+      }
+      @media screen and (max-width:600px)
+        {
+            .column
+            {
+                width:100%;
+                display:block;
+                margin-bottom: 20px;
+            }
+        }
+      
+        .card
+        {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            max-width:300px;
+            margin:auto;
+            background-color:white;
+            text-align:center;
+            border-radius:40px;
+            padding-bottom:15px;
+        }
+      
+        .title
+        {
+            color:#46ACC2;
+            font-size:18px;
+        }
+      
+        button
+        {
+            border:none;
+            padding:8px;
+            display: inline-block;
+            color:white;
+            background-color:black;
+            cursor:pointer;
+            width:70%;
+            border-radius:20px;
+            font-size:18px;
+            text-align:center;
+        }
+      
+        a{
+            text-decoration: none;
+            font-size:22px;
+            color:#46ACC2;
+        }
+      
+        a:hover,button:hover{
+            opacity: 0.6;
+        }
+      
+      
+      
+      
+      @media (max-width: 1031px) {
+          html {
+              overflow-x: auto;
+              width: 100%;
+              padding-left: 0;
+              padding-right: 0;
+          }
+      
+          /* nav tabs */
+          nav ul {
+              width: 100%;
+              margin-right: 0;
+              background-color: #46ACC2;
+          }
+          nav ul li {
+              /* width: 100%; */
+              border-left: 0;
+              border-right: 0;
+              border-width: auto;   
+          }
+          nav ul li a {
+              padding: 8px 0;
+              font-size: 16px;
+              align-content: center;
+          }
+          /* 
+          
+          nav ul li a {
+              font-size: 16px;
+          }
+          
+          /* ul {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 100%;
+              background: #0082e6;
+              top: 80px;
+              left: 100%;
+              text-align: center;
+              transition: all .5s;
+          } */
+          /* nav ul li {
+                  display: block;
+                  margin: 50px 0;
+                  line-height: 30px;
+              } */
+          a:hover,
+          a.active {
+              background: black;
+              /* color:#1b9bff; */
+          }
+         
+          .social {
+              font-size: 200%;
+          }
+          p {
+              font-size: 15px;
+          }
+          */
+      }
+      
+      @media (max-width: 768px) {
+          label.logo {
+              display: flexbox;
+              padding-left: 30%;
+              /* padding: 8px 0; */
+              font-size: x-large;
+      
+          }
+         
+          h1 {
+              text-align: center;
+          }
+          nav ul {
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-bottom: 50px;
+              background-color: #46ACC2;
+          }
+          nav ul li {
+              width: 100%;
+              border-left: 10px;
+              border-right: 0;
+              border: 1px solid white;
+              border-width: auto;
+          }
+          nav ul li a {
+              display: flex;
+              justify-content: center;
+              /* padding-left: 30%; */
+              /* padding: 8px 0; */
+              font-size: 16px;
+      
+          }
+         
+          /* 
+          ul {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 100%;
+              background: #0082e6;
+              top: 80px;
+              left: 100%;
+              text-align: center;
+              transition: all .5s;
+          }
+              /* nav ul li {
+                  display: block;
+                  margin: 50px 0;
+                  line-height: 30px;
+              } */
+          a:hover,
+          a.active {
+              background: none;
+              color:black;
+          }
+          .social {
+              font-size: 80%;
+          }
+          p {
+              font-size: 15px;
+          }
+      }
